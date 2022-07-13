@@ -71,9 +71,9 @@ function Keys() {
 		<>
 			<div className='key-wrapper-1'>
 				<div className='key-board clearfix' id='key-board'>
-					{cells1.map((cellur) => {
+					{cells1.map((cellur, i) => {
 						if (cellur === 'blue') blueCount++;
-						return <div className={`cell ${cellur}`}></div>;
+						return <div key={i} className={`cell ${cellur}`}></div>;
 					})}
 				</div>
 				<div
