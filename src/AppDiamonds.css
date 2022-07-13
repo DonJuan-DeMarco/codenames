@@ -1,0 +1,134 @@
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 10vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.App-main {
+	background-color: white;
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: black;
+}
+
+.wrapper {
+	background-color: antiquewhite;
+	padding: 10px;
+}
+
+:root {
+	--bg-color: rgb(204, 154, 94);
+	--bg-color-1: rgb(100, 81, 58);
+	--bg-color-2: rgb(171, 129, 78);
+	--bg-color-3: rgb(204, 154, 94);
+}
+
+.card {
+	width: 6.6cm;
+	height: 4.4cm;
+	background-color: var(--bg-color);
+	/* background-image: url(img/asohana.jpg);
+	background-repeat: no-repeat;
+	background-size: cover; */
+	display: block;
+	position: relative;
+	background-blend-mode: color-burn;
+	border-radius: 0.5cm;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	z-index: 1;
+}
+.card::after {
+	content: '';
+	border-radius: 0.5cm;
+	background: url(img/diamonds.jpg);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: -100px;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+}
+.card p {
+	margin: 0;
+	padding: 0;
+}
+
+.word {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 0.5cm;
+	color: #000;
+}
+
+.mirrored {
+	font-size: 0.4cm;
+	color: rgb(243, 238, 238);
+
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+		1px 1px 0 #000;
+	transform: rotate(180deg);
+	padding: 0.1cm 0 0.1cm 0.6cm !important;
+	background: linear-gradient(
+		to right,
+		var(--bg-color-2),
+		var(--bg-color-2),
+		var(--bg-color),
+		rgba(255, 0, 0, 0)
+	);
+	font-style: italic;
+	z-index: 1;
+}
+
+.main-field {
+	width: 5.4cm;
+	height: 1.2cm;
+	background-color: #ffffff;
+	border-radius: 0.5cm 0 0.5cm 0.5cm;
+	margin: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	z-index: 1;
+}
